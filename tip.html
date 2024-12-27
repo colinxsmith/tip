@@ -1,0 +1,38 @@
+
+
+<main class="result">
+  <p class="noted">
+    <span class="tooltip">I am a tooltip</span>
+    <span class="text">I am some bit of text </span>
+  </p>
+</main>
+
+<!--  -->
+
+<form class="controls">
+  <button type="reset" class="reset">Reset</button>
+
+  <div class="property">
+    <label for="base">
+      Base: <span class="value">30px</span>
+    </label>
+    <input type="range" id="base" min="5" max="100" value="30">
+  </div>
+
+  <div class="property">
+    <label for="height">
+      Height: <span class="value">15px</span>
+    </label>
+    <input type="range" id="height" min="5" max="50" value="15">
+  </div>
+
+  <div class="property">
+    <label for="left">
+      Left: <span class="value">50%</span>
+    </label>
+    <input type="range" id="left" min="0" max="100" value="50">
+  </div>
+</form>
+
+<script src="tip.js"></script>
+<link rel="stylesheet" href="tip.css">

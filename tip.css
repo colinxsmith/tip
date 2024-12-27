@@ -1,0 +1,147 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --triangle-base: 20px;
+  --triangle-height: 15px;
+  --triangle-top: 100%;
+  --triangle-left: 100%;
+
+  --accent-color: #ed2453;
+  --solid-color: blue;
+}
+
+.tooltip {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: var(--triangle-top);
+    left: var(--triangle-left);
+    z-index: -1;
+
+    width: var(--triangle-base);
+    height: var(--triangle-height);
+    background-color: var(--accent-color);
+
+    clip-path: polygon(
+      max(50% - var(--triangle-left), 0%) 0,
+      min(150% - var(--triangle-left), 100%) 0%,
+      50% 100%
+    );
+    transform: translate(-50%);
+  }
+}
+
+/* Aesthetic Styles */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+  gap: 40px;
+
+  padding: 20px;
+  height: 100vh;
+
+  @media (width < 700px) {
+    flex-flow: column;
+  }
+}
+
+.result {
+  flex: 2;
+  display: grid;
+  place-items: center;
+}
+
+.noted {
+  display: flex;
+  flex-flow: column;
+  place-items: center;
+  gap: 20px;
+
+  padding: 40px 60px;
+  border: 2px solid var(--solid-color);
+
+  text-align: center;
+}
+
+.tooltip {
+  padding: 10px 15px;
+  width: fit-content;
+
+  font-weight: 800;
+  color: #fff;
+  background-color: var(--accent-color);
+}
+
+.text {
+  border: 2px solid var(--solid-color);
+  padding: 10px 15px;
+
+  font-weight: 800;
+  color: var(--solid-color);
+}
+
+.controls {
+  flex: 1;
+
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+.property {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+
+  label {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    width: max-content;
+  }
+
+  input {
+    width: min(300px, 100%);
+    accent-color: var(--accent-color);
+  }
+}
+
+button {
+  all: unset;
+
+  padding: 10px 15px;
+  border: 2px solid var(--accent-color);
+
+  width: fit-content;
+
+  font-weight: 800;
+  color: #ed2453;
+  cursor: pointer;
+
+  transition: background-color 200ms ease-out;
+
+  &:is(:hover, :active) {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
+
+  &:active {
+    transform: scale(102%);
+  }
+}

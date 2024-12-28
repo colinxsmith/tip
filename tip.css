@@ -5,12 +5,12 @@
   --triangle-height: 15px;
   --triangle-left: 50%;
 
-  --accent-color: #ed2453;
-  --solid-color: blue;
+  --accent-color: #ed5324;
+  --solid-color: green;
 }
 
 .tooltip {
-  border-image: fill 0 // var(--triangle-height) conic-gradient(var(--accent-color) 0 0);
+  border-image: fill 0 / / var(--triangle-height) conic-gradient(var(--accent-color) 0 0);
     clip-path: polygon(
     0% 100%,
     0% 0%,

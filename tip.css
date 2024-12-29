@@ -12,7 +12,7 @@
 }
 
 .tooltip {
-  position: relative;
+  position: absolute;
   left: var(--tip-left);
   top: var(--tip-top);
   border-image: fill 0 / / var(--triangle-height) conic-gradient(var(--accent-color) 0 0);

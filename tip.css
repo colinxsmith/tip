@@ -7,9 +7,14 @@
 
   --accent-color: #d524ed;
   --solid-color: green;
+  --tip-top: 0%;
+  --tip-left: 0%;
 }
 
 .tooltip {
+  position: relative;
+  left: var(--tip-left);
+  top: var(--tip-top);
   border-image: fill 0 / / var(--triangle-height) conic-gradient(var(--accent-color) 0 0);
     clip-path: polygon(
     0% 100%,

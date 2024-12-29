@@ -36,12 +36,25 @@ leftInput.addEventListener("input", (event) => {
   tooltip.style.setProperty("--triangle-left", value);
 });
 
+
+//T Left Slider
+
+const tleftInput = document.querySelector("#tleft");
+const tleftLabelValue = document.querySelector("label[for='tleft'] .value");
+
+tleftInput.addEventListener("input", (event) => {
+  const value = `${event.target.value}%`;
+
+  tleftLabelValue.innerHTML = value;
+  tooltip.style.setProperty("--tip-left", value);
+});
 // Reset
 
 const resetButton = document.querySelector(".reset");
 const baseDefault = "30px";
 const heightDefault = "15px";
 const leftDefault = "50%";
+const tleftDefault = "0%";
 
 resetButton.addEventListener("click", (event) => {
   baseLabelValue.innerHTML = baseDefault;
@@ -52,4 +65,7 @@ resetButton.addEventListener("click", (event) => {
 
   leftLabelValue.innerHTML = leftDefault;
   tooltip.style.setProperty("--triangle-left", leftDefault);
+ 
+  tleftLabelValue.innerHTML = tleftDefault;
+  tooltip.style.setProperty("--tip-left", tleftDefault);
 });

@@ -48,6 +48,37 @@ tleftInput.addEventListener("input", (event) => {
   tleftLabelValue.innerHTML = value;
   tooltip.style.setProperty("--tip-left", value);
 });
+//T Top Slider
+
+const ttopInput = document.querySelector("#ttop");
+const ttopLabelValue = document.querySelector("label[for='ttop'] .value");
+
+ttopInput.addEventListener("input", (event) => {
+  const value = `${event.target.value}px`;
+
+  ttopLabelValue.innerHTML = value;
+  tooltip.style.setProperty("--tip-top", value);
+});
+//T Position Radio
+
+const tabsoluteInput = document.querySelector("#tabsolute");
+const tabsoluteValue = document.querySelector("label[for='tabsolute'] .value");
+const trelativeInput = document.querySelector("#trelative");
+const trelativeValue = document.querySelector("label[for='trelative'] .value");
+
+tabsoluteInput.addEventListener("input", (event) => {
+  const value = `${event.target.value}`;
+console.log(value);
+  tabsoluteValue.innerHTML = value;
+  tooltip.style.setProperty("--tip-position", value);
+});
+trelativeInput.addEventListener("input", (event) => {
+  const value = `${event.target.value}`;
+
+  console.log(value);
+  trelativeValue.innerHTML = value;
+  tooltip.style.setProperty("--tip-position", value);
+});
 // Reset
 
 const resetButton = document.querySelector(".reset");
@@ -55,6 +86,8 @@ const baseDefault = "30px";
 const heightDefault = "15px";
 const leftDefault = "50%";
 const tleftDefault = "0%";
+const ttopDefault = "0px";
+const tpositionDefault="absolute";
 
 resetButton.addEventListener("click", (event) => {
   baseLabelValue.innerHTML = baseDefault;
@@ -68,4 +101,10 @@ resetButton.addEventListener("click", (event) => {
  
   tleftLabelValue.innerHTML = tleftDefault;
   tooltip.style.setProperty("--tip-left", tleftDefault);
+
+  ttopLabelValue.innerHTML = ttopDefault;
+  tooltip.style.setProperty("--tip-top", ttopDefault);
+
+  tabsoluteValue.innerHTML = tpositionDefault;
+  tooltip.style.setProperty("--tip-position", tpositionDefault);
 });

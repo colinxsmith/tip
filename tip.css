@@ -5,17 +5,19 @@
   --triangle-height: 15px;
   --triangle-left: 50%;
 
-  --accent-color: #d524ed;
-  --solid-color: green;
-  --tip-top: 200px;
+  --accent-colour: #bbc8ce;
+  --solid-colour: green;
+  --tip-top: 0px;
   --tip-left: 0%;
+  --tip-position: absolute;
+  --button-colour:#a214be;
 }
 
 .tooltip {
-  position: absolute;
+  position: var(--tip-position);
   left: var(--tip-left);
   top: var(--tip-top);
-  border-image: fill 0 / / var(--triangle-height) conic-gradient(var(--accent-color) 0 0);
+  border-image: fill 0 / / var(--triangle-height) conic-gradient(var(--accent-colour) 0 0);
     clip-path: polygon(
     0% 100%,
     0% 0%,
@@ -64,7 +66,7 @@ body {
   gap: 20px;
 
   padding: 40px 60px;
-  border: 2px solid var(--solid-color);
+  border: 2px solid var(--solid-colour);
 
   text-align: center;
 }
@@ -75,15 +77,15 @@ body {
 
   font-weight: 800;
   color: #fff;
-  background-color: var(--accent-color);
+  background-color: var(--accent-colour);
 }
 
 .text {
-  border: 2px solid var(--solid-color);
+  border: 2px solid var(--solid-colour);
   padding: 10px 15px;
 
   font-weight: 800;
-  color: var(--solid-color);
+  color: var(--solid-colour);
 }
 
 .controls {
@@ -95,9 +97,8 @@ body {
 }
 
 .property {
-  display: flex;
-  flex-flow: column;
-  gap: 10px;
+  display: -webkit-box;
+  gap:7px;
 
   label {
     display: flex;
@@ -108,8 +109,8 @@ body {
   }
 
   input {
-    width: min(300px, 100%);
-    accent-color: var(--accent-color);
+    width: min(500px, 100%);
+    accent-color: var(--accent-colour);
   }
 }
 
@@ -117,18 +118,18 @@ button {
   all: unset;
 
   padding: 10px 15px;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-colour);
 
   width: fit-content;
 
   font-weight: 800;
-  color: #ed2453;
+  color: var(--button-colour);
   cursor: pointer;
 
-  transition: background-color 200ms ease-out;
+  transition: background-colour 200ms ease-out;
 
   &:is(:hover, :active) {
-    background-color: var(--accent-color);
+    background-color: var(--button-colour);
     color: #fff;
   }
 

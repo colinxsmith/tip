@@ -33,11 +33,23 @@
     <input type="range" id="left" min="0" max="100" value="50">
   </div>
 
-    <div class="property">
+  <div class="property">
     <label for="tleft">
      tLeft: <span class="value">0%</span>
     </label>
-    <input type="range" id="tleft" min="0" max="100" value="0">
+    <input type="range" id="tleft" min="-100" max="100" value="0">
+  </div>    <div class="property">
+    <label for="ttop">
+     tTop: <span class="value">0px</span>
+    </label>
+    <input type="range" id="ttop" min="-100" max="100" value="0">
+    </div>
+  </div>    
+  <div class="property" >
+    <input type="radio" id="tabsolute" name="position" value="absolute" checked>
+    <label for="tabsolute" ><span class="value">absolute</span></label>
+    <input type="radio" id="trelative" name="position" value="relative">
+    <label for="trelative" ><span class="value">relative</span></label>
     </div>
 </form>
 

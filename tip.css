@@ -17,8 +17,8 @@
   position: var(--tip-position);
   left: var(--tip-left);
   top: var(--tip-top);
-  border-image: fill 0 / / var(--triangle-height) conic-gradient(var(--accent-colour) 0 0);
-    clip-path: polygon(
+  border-image: fill 0 / / var(--triangle-height) linear-gradient(var(--accent-colour) 0 0);
+  clip-path: polygon(
     0% 100%,
     0% 0%,
     100% 0%,
@@ -73,8 +73,8 @@ body {
 
 .tooltip {
   padding: 10px 15px;
-  width: fit-content;
-
+  width: fit-content; 
+  height: min-content;
   font-weight: 800;
   color: #fff;
   background-color: var(--accent-colour);

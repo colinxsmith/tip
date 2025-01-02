@@ -1,33 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --triangle-base: 30px;
-  --triangle-height: 15px;
+  --triangle-base: 14px;
+  --triangle-height: 10px;
+  --triangle-top: 100%;
   --triangle-left: 50%;
 
   --accent-colour: #bbc8ce;
-  --solid-colour: green;
-  --tip-top: 0px;
-  --tip-left: 0%;
-  --tip-position: absolute;
-  --button-colour:#a214be;
+  --solid-colour: #020e13;
 }
 
 .tooltip {
-  position: var(--tip-position);
-  left: var(--tip-left);
-  top: var(--tip-top);
-  border-image: fill 0 / / var(--triangle-height) linear-gradient(var(--accent-colour) 0 0);
-  clip-path: polygon(
-    0% 100%,
-    0% 0%,
-    100% 0%,
-    100% 100%,
-    min(var(--triangle-left) + var(--triangle-base) / 2, 100%) 100%,
-    var(--triangle-left) calc(100% + var(--triangle-height)),
-    max(var(--triangle-left) - var(--triangle-base) / 2, 0px) 100%
-  );
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: var(--triangle-top);
+    left: var(--triangle-left);
+    z-index: -1;
+
+    width: var(--triangle-base);
+    height: var(--triangle-height);
+    background-color: var(--accent-colour);
+
+    clip-path: polygon(
+      max(50% - var(--triangle-left), 0%) 0,
+      min(150% - var(--triangle-left), 100%) 0%,
+      50% 100%
+    );
+    transform: translate(-50%);
+  }
 }
+
+/* Aesthetic Styles */
 
 * {
   margin: 0px;
@@ -73,8 +79,9 @@ body {
 
 .tooltip {
   padding: 10px 15px;
-  width: fit-content; 
-  height: min-content;
+  width: fit-content;
+  border-radius: 5px 5px 0 0;
+
   font-weight: 800;
   color: #fff;
   background-color: var(--accent-colour);
@@ -97,8 +104,9 @@ body {
 }
 
 .property {
-  display: -webkit-box;
-  gap:7px;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
 
   label {
     display: flex;
@@ -109,7 +117,7 @@ body {
   }
 
   input {
-    width: min(500px, 100%);
+    width: min(300px, 100%);
     accent-color: var(--accent-colour);
   }
 }
@@ -123,13 +131,13 @@ button {
   width: fit-content;
 
   font-weight: 800;
-  color: var(--button-colour);
+  color: #ed2453;
   cursor: pointer;
 
-  transition: background-colour 200ms ease-out;
+  transition: background-color 200ms ease-out;
 
   &:is(:hover, :active) {
-    background-color: var(--button-colour);
+    background-color: var(--accent-colour);
     color: #fff;
   }
 

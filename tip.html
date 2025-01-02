@@ -1,5 +1,4 @@
 
-
 <main class="result">
   <p class="noted">
     <span class="tooltip">I am a tooltip</span>
@@ -14,16 +13,23 @@
 
   <div class="property">
     <label for="base">
-      Base: <span class="value">30px</span>
+      Base: <span class="value">14px</span>
     </label>
-    <input type="range" id="base" min="5" max="100" value="30">
+    <input type="range" id="base" min="5" max="50" value="14">
   </div>
 
   <div class="property">
     <label for="height">
-      Height: <span class="value">15px</span>
+      Height: <span class="value">10px</span>
     </label>
-    <input type="range" id="height" min="5" max="50" value="15">
+    <input type="range" id="height" min="5" max="50" value="10">
+  </div>
+
+  <div class="property">
+    <label for="top">
+      Top: <span class="value">100%</span>
+    </label>
+    <input type="range" id="top" min="-100" max="100" value="100">
   </div>
 
   <div class="property">
@@ -32,26 +38,6 @@
     </label>
     <input type="range" id="left" min="0" max="100" value="50">
   </div>
-
-  <div class="property">
-    <label for="tleft">
-     tLeft: <span class="value">0%</span>
-    </label>
-    <input type="range" id="tleft" min="-100" max="100" value="0">
-  </div>    <div class="property">
-    <label for="ttop">
-     tTop: <span class="value">0px</span>
-    </label>
-    <input type="range" id="ttop" min="-100" max="100" value="0">
-    </div>
-  </div>    
-  <div class="property" >
-    <input type="radio" id="tabsolute" name="position" value="absolute" checked>
-    <label for="tabsolute" ><span class="value">absolute</span></label>
-    <input type="radio" id="trelative" name="position" value="relative">
-    <label for="trelative" ><span class="value">relative</span></label>
-    </div>
 </form>
-
 <script src="tip.js"></script>
 <link rel="stylesheet" href="tip.css">

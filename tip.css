@@ -137,3 +137,6 @@ button {
     transform: scale(102%);
   }
 }
+svg{
+  font-size: large;
+}

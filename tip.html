@@ -1,11 +1,26 @@
 
 
 <main class="result">
+  <img src="http://192.168.0.37:1234/ak.jpg"  class="clip-svg">
   <p class="noted">
     <span class="tooltip">I am a tooltip</span>
     <span class="text">I am some bit of text </span>
   </p>
-  <svg>
+  <svg> 
+  <defs>
+    <clipPath  id="myClip">
+      <polygon points="
+      0 20,
+      0 0,
+      100 0,
+      100 20,
+      55 20,
+      50 30,
+      45 20"
+      >
+    </polygon>
+    </clipPath>
+  </defs>
     <polygon points="
     0 20,
     0 0,

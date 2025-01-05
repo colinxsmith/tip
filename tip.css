@@ -28,6 +28,11 @@
     max(var(--triangle-left) - var(--triangle-base) / 2, 0px) 100%
   );
 }
+.clip-svg {
+  clip-path: url(#myClip);
+  border-radius: 8px;
+  width: 100px;
+}
 
 * {
   margin: 0px;

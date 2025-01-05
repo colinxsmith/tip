@@ -1,2 +1,2 @@
 #!/bin/bash
-cp index.html tip* /var/www/html/
+cp index.html tip* favicon.ico /var/www/html/

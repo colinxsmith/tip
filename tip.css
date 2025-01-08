@@ -72,6 +72,7 @@ body {
 
   padding: 40px 60px;
   border: 2px solid var(--solid-colour);
+  border-radius: 20px;
 
   text-align: center;
 }

@@ -165,3 +165,8 @@ svg{
   background-color: #bbc8ce;
   border-color: #c1dd22;
 }
+.top{
+  background-color: rgb(255, 0, 200);
+  border-radius: 0 7px 9px 0;
+  text-align: center;
+}

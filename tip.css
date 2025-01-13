@@ -19,8 +19,9 @@
   top: var(--tip-top);
   border-image-source: linear-gradient(var(--accent-colour) 0 0);
   border-image-slice: fill 0;
-  border-image-width: 1;
+  border-image-width: inherit;
   border-image-outset: var(--triangle-height);
+  border-radius: 20px;
 /*  border-image: fill 0 / / var(--triangle-height) linear-gradient(var(--accent-colour) 0 0);*/
   clip-path: polygon(
     0% 100%,
